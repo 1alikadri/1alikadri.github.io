@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Saver</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://previews.123rf.com/images/naum100/naum1002305/naum100230500075/205636493-please-switch-off-electricity-save-energy-motivational-banner-hand-press-shutdown-button-light-bulb.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            color: red; /* Set default text color to black */
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(200vh - 50px);
+        }
+        .electricity-meter {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .save-button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .save-button:hover {
+            background-color: #45a049;
+        }
+        .click-count {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="content">
+        <div class="electricity-meter">
+            Electricity Meter - <span id="meter">1</span>
+        </div>
+        <button class="save-button" onclick="saveElectricity()">Save Electricity</button>
+        <div class="click-count">Clicks: <span id="clickCount">0</span></div>
+    </div>
+    <script>
+        let meterValue = 1;
+        let clickCounter = 0;
+        setInterval(() => {
+            meterValue += 1;
+            document.getElementById('meter').textContent = meterValue;
+        }, 5000);
+
+        function saveElectricity() {
+            clickCounter++;
+            document.getElementById('clickCount').textContent = clickCounter;
+            alert("You saved electricity");
+            window.location.href = "test3.html"; // Redirect to a different webpage
+        }
+    </script>
+</body>
+</html>
