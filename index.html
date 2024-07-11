@@ -17,6 +17,7 @@
         .banner {
             width: 100%;
             height: 100vh; /* Adjust height to fill viewport */
+            position: relative;
         }
         
         .banner img {
@@ -29,13 +30,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Align content to the top */
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh; /* Adjust height */
             pointer-events: none; /* Make sure the clicks go through to the anchor link */
+            padding-top: 20px; /* Add some padding to the top */
         }
         
         .electricity-meter {
