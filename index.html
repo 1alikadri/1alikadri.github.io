@@ -10,7 +10,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #008000; /* Set background color */
-            color: red; /* Set default text color */
+            color: black; /* Set default text color */
         }
         
         .banner {
@@ -19,6 +19,7 @@
             background-position: center; /* Center the image */
             background-repeat: no-repeat;
             height: 100vh; /* Adjust height to fill viewport */
+            position: relative; /* Needed for positioning the button */
         }
         
         .content {
@@ -43,7 +44,9 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            margin-top: 70px; /* Add margin to shift the button down */
+            position: absolute; /* Position the button absolutely */
+            top: 20px; /* Adjust the distance from the top */
+            left: 20px; /* Adjust the distance from the left */
         }
         
         .save-button:hover {
@@ -57,12 +60,13 @@
     </style>
 </head>
 <body>
-    <div class="banner"></div>
+    <div class="banner">
+        <button class="save-button" onclick="saveElectricity()">Save Electricity</button>
+    </div>
     <div class="content">
         <div class="electricity-meter">
             Electricity Meter - <span id="meter">1</span>
         </div>
-        <button class="save-button" onclick="saveElectricity()">Save Electricity</button>
         <div class="click-count">Clicks: <span id="clickCount">0</span></div>
     </div>
     <script>
