@@ -3,87 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electricity Saver</title>
+    <title>DLLE Orientation Registration</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #008000; /* Set background color */
-            color: red; /* Set default text color */
+            background: url('unsplash.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #000000;
+        }
+
+        .container {
             text-align: center;
+            padding: 50px;
         }
-        
-        .banner {
-            width: 100%;
-            height: 100vh; /* Adjust height to fill viewport */
-            position: relative;
-        }
-        
-        .banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Adjust to fit the screen */
-        }
-        
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Align content to the top */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh; /* Adjust height */
-            pointer-events: none; /* Make sure the clicks go through to the anchor link */
-            padding-top: 20px; /* Add some padding to the top */
-        }
-        
-        .electricity-meter {
-            font-size: 2em;
+
+        .logo {
+            max-width: 150px;
             margin-bottom: 20px;
-            font-weight: bold;
         }
-        
-        .click-count {
-            margin-top: 10px;
+
+        .main-heading {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        .sub-heading {
+            font-family: 'Georgia', serif;
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .info-text {
+            font-family: 'Arial', sans-serif;
             font-size: 1.2em;
+            margin: 20px 0;
         }
-        
-        a {
-            display: block;
-            width: 100%;
-            height: 100%;
+
+        .details {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1em;
+            margin: 20px 0;
+        }
+
+        .reminder {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .more-info {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+            color: #007bff;
             text-decoration: none;
+        }
+
+        .more-info:hover {
+            text-decoration: underline;
+        }
+
+        .register-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: 'Cosmic Sans', sans-serif;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .register-button:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <a href="test3.html" onclick="saveElectricity()">
-        <div class="banner">
-            <img src="https://previews.123rf.com/images/naum100/naum1002305/naum100230500075/205636493-please-switch-off-electricity-save-energy-motivational-banner-hand-press-shutdown-button-light-bulb.jpg" alt="Electricity Saver Banner">
-        </div>
-        <div class="content">
-            <div class="electricity-meter">
-                Electricity Meter - <span id="meter">1</span>
-            </div>
-            <div class="click-count">Clicks: <span id="clickCount">0</span></div>
-        </div>
-    </a>
-    <script>
-        let meterValue = 1;
-        let clickCounter = 0;
-        setInterval(() => {
-            meterValue += 1;
-            document.getElementById('meter').textContent = meterValue;
-        }, 5000);
-
-        function saveElectricity() {
-            clickCounter++;
-            document.getElementById('clickCount').textContent = clickCounter;
-            alert("You saved electricity");
-        }
-    </script>
+    <div class="container">
+        <header>
+            <img src="college-logo.jpeg" alt="College Logo" class="logo">
+            <h1 class="main-heading">Shree L.R. Tiwari Degree College</h1>
+            <h2 class="sub-heading">Department of Lifelong Learning & Extension</h2>
+            <img src="dlle-logo.jpeg" alt="DLLE Logo" class="logo">
+        </header>
+        <main>
+            <p class="info-text">Join us for the DLLE Orientation for FY students and deepen your understanding of the program.
+                 DLLE provides valuable training and skills that will benefit you throughout your life.</p>
+            <p class="details">
+                Date: 2nd August 2024<br>
+                Time: 10:30 am<br>
+                Venue: Room 502, 5th floor, New building
+            </p>
+            <p class="reminder">Don't miss this opportunity to enhance your learning journey.</p>
+            <p><a href="more-info.html" class="more-info">More Info about the dlle extensions</a></p>
+            <a href="registration-form.html" class="register-button">Register Now</a>
+        </main>
+    </div>
 </body>
 </html>
